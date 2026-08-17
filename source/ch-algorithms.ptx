@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-algorithms" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Algorithms and Problem Solving</title>
+
+  <introduction>
+    <p>
+      <!-- TODO: what is an algorithm, informally; efficiency/complexity at a
+           very intuitive level; searching/sorting as running examples. -->
+      Placeholder text.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-what-is-an-algorithm">
+    <title>What Is an Algorithm?</title>
+    <p>
+      <!-- TODO -->
+      Placeholder text.
+    </p>
+  </section>
+
+</chapter>

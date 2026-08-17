@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-what-is-computer-science" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Computation, Broadly Construed</title>
+
+  <p>
+    <!-- TODO: real content. Suggested thread: computer science is the study of
+         algorithms/computation, not just "using computers" or "programming."
+         Good place for a short history (Turing, Lovelace, Hopper) and a
+         preview of the "big ideas" the rest of the book will develop. -->
+    Placeholder text.
+  </p>
+
+</section>

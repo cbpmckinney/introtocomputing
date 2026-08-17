@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-systems-and-networks" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>How Computers and Networks Work</title>
+
+  <introduction>
+    <p>
+      <!-- TODO: hardware basics, logic gates (circuitikz lives here nicely),
+           operating systems, how the internet moves data. -->
+      Placeholder text.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-logic-gates">
+    <title>Logic Gates and Circuits</title>
+    <p>
+      <!-- TODO: example <latex-image> using circuitikz goes here once content
+           is written; the circuitikz package is already loaded in docinfo.ptx. -->
+      Placeholder text.
+    </p>
+  </section>
+
+</chapter>

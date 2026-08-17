@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- we first include a file which contains the docinfo element: -->
+  <xi:include href="./docinfo.ptx" />
+
+  <!-- TODO: pick a real title/subtitle for the book. -->
+  <book xml:id="csc101-notes">
+    <title>Computing: A First Look</title>
+    <subtitle>Notes for CSC-101, Wabash College</subtitle>
+
+    <!-- Include frontmatter -->
+    <xi:include href="./frontmatter.ptx" />
+
+    <!-- Include chapters. Reorder/add/remove as the course structure firms up. -->
+    <xi:include href="./ch-what-is-computer-science.ptx" />
+    <xi:include href="./ch-representing-information.ptx" />
+    <xi:include href="./ch-algorithms.ptx" />
+    <xi:include href="./ch-systems-and-networks.ptx" />
+    <xi:include href="./ch-computing-and-society.ptx" />
+
+    <!-- Include backmatter -->
+    <xi:include href="./backmatter.ptx" />
+
+  </book>
+</pretext>

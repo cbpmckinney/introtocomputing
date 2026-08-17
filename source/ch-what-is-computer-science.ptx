@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-what-is-computer-science" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>What Is Computer Science?</title>
+
+  <introduction>
+    <p>
+      <!-- TODO: motivate the course. What is CS as a discipline, and how does
+           it differ from "learning to code"? Why take this before intro Python? -->
+      Placeholder text.
+    </p>
+  </introduction>
+
+  <xi:include href="sec-what-is-computer-science.ptx" />
+
+</chapter>
