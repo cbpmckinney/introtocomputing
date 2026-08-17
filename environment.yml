@@ -1,0 +1,16 @@
+name: csc101-book
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - -r requirements.txt
+
+# PreTeXt (https://pretextbook.org) is a pip/PyPI-only package -- there is no
+# conda-forge build of it. Do NOT run `conda install pretext`: there's an
+# unrelated bioinformatics package with that same name on the bioconda
+# channel (Hi-C genome contact maps -- nothing to do with this project).
+# This env installs the real thing via pip, pinned to whatever version
+# requirements.txt specifies, so there's a single source of truth for the
+# version instead of two files that can drift out of sync.

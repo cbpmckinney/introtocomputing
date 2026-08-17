@@ -38,6 +38,30 @@ on-ramp for anyone who doesn't want to install LaTeX/Python locally.
 2. From this directory: `pip install -r requirements.txt`
 3. Confirm it works: `pretext build web`
 
+**Option C -- dedicated conda environment (recommended if you use conda).**
+Installing `pretext` into your conda `base` environment is a common source
+of confusing bugs later -- `base` easily ends up with an old or shared
+version pinned by some other project. A project-specific environment avoids
+that:
+
+```bash
+conda env create -f environment.yml
+conda activate csc101-book
+pretext build web
+```
+
+To pick up a version bump later (after `requirements.txt` changes):
+
+```bash
+conda activate csc101-book
+pip install -r requirements.txt --upgrade
+```
+
+**Do not run `conda install pretext`.** There's an unrelated bioinformatics
+package with the same name on the `bioconda` channel (Hi-C genome contact
+maps) -- installing it would silently give you the wrong tool entirely.
+PreTeXt only ships via pip.
+
 ## Day-to-day commands
 
 - `pretext build web` -- build the HTML edition into `output/web/`.
@@ -79,6 +103,45 @@ git push -u origin main
 
 Then create the (empty) repository on github.com first if you haven't, and
 substitute your actual username/org and repo name above.
+
+## Contributing: working on a branch
+
+For anyone other than the sole maintainer, the workflow is: write on a
+branch, preview it locally, open a pull request, merge, and only *then*
+publish. This keeps in-progress or half-finished chapters off the live
+public site.
+
+**Getting a branch and previewing it locally:**
+
+```bash
+git fetch origin
+git switch their-branch-name          # or: git checkout -b name origin/name
+conda activate csc101-book            # see "Getting set up" above if not created yet
+pretext validate                      # quick schema sanity check
+pretext view web                      # builds and opens a local live preview
+```
+
+`pretext view web` builds the currently checked-out branch and starts a
+local preview server in your browser (not `pretext build`, which builds but
+doesn't serve/open anything, and not `pretext deploy`, which publishes --
+see the warning below). Reviewing this local preview, not just reading the
+diff, is the real test -- PreTeXt's rendering (knowls, cross-references,
+numbering) can look different from how the raw XML reads.
+
+**Important: never run `pretext deploy` from a branch.** `pretext deploy`
+always publishes to the live `gh-pages` site, regardless of which branch you
+currently have checked out -- it deploys whatever's currently built, not
+specifically "the `main` branch." Running it while testing a draft branch
+would push that draft live immediately. Treat `pretext deploy` as a
+`main`-only command, run after a branch is reviewed and merged.
+
+**Suggested full loop:**
+1. `git switch -c my-topic-branch` and write.
+2. `pretext view web` locally to check it, as many times as needed.
+3. `git add`, `git commit`, `git push -u origin my-topic-branch`.
+4. Open a pull request against `main` on GitHub.
+5. After review/merge, whoever's turn it is to publish runs `pretext deploy`
+   from an up-to-date `main`.
 
 ## Next steps for the team
 

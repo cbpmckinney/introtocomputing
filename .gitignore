@@ -1,0 +1,17 @@
+# PreTeXt build artifacts
+/output/
+/generated-assets/
+/.cache/
+*.log
+.error_schema.log
+/logs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS/editor cruft
+.DS_Store
+.vscode/
